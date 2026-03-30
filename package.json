@@ -4,11 +4,14 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "db:generate": "turbo run generate",
+    "db:migrate":"turbo run migrate",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "prettier": "^3.7.4",
     "turbo": "^2.8.20",
     "typescript": "5.9.2"
@@ -20,5 +23,12 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@nestjs/jwt": "^11.0.2",
+    "bcrypt": "^6.0.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "zod": "^3.25.76"
+  }
 }
